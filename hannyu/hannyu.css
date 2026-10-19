@@ -1,0 +1,164 @@
+/* ひっこし整えメモの道具（荷物量・搬入経路）共通の見た目。色はサイトの枠（司令塔）が --accent などを決めればそれを使い、無ければ下の既定値 */
+.hk{--hk-accent:var(--accent,#3d7f74);--hk-ink:var(--ink,#25302e);--hk-sub:var(--sub,#5f6b68);--hk-line:var(--line,#dfe6e3);--hk-card:var(--card,#fff);
+  --hk-bg:var(--bg,#f6f8f7);--hk-soft:var(--soft,#e3efec);--hk-ok:#2f6b3a;--hk-okbg:#e6f2e8;--hk-chk:#8a5a12;--hk-chkbg:#fbeedd;--hk-ng:#9b2c2c;--hk-ngbg:#fbe5e5;
+  max-width:1080px;margin:0 auto;padding:0 16px 96px;color:var(--hk-ink);font-size:1rem;line-height:1.7}
+@media (prefers-color-scheme:dark){.hk{--hk-ok:#a8d8b2;--hk-okbg:#203a26;--hk-chk:#f0c98a;--hk-chkbg:#3d2e17;--hk-ng:#f3a9a9;--hk-ngbg:#3f1f1f}}
+.hk *{box-sizing:border-box}
+.hk [hidden]{display:none!important}
+.hk h1{font-size:1.45rem;line-height:1.4;margin:20px 0 8px}
+.hk h2{font-size:1.1rem;margin:18px 0 8px}
+.hk h3{font-size:.9375rem;margin:14px 0 4px;color:var(--hk-sub)}
+.hk button{font:inherit;color:inherit;cursor:pointer}
+.hk a{color:var(--hk-accent)}
+.hk-hint{font-size:.8125rem;color:var(--hk-sub);margin:6px 0}
+.hk-step,.hk-result,.hk-sect{background:var(--hk-card);border:1px solid var(--hk-line);border-radius:16px;padding:14px 16px;margin:14px 0}
+.hk-result{border:2px solid var(--hk-accent)}
+.hk-exband{background:var(--hk-soft);border-radius:10px;padding:8px 12px;font-size:.875rem;font-weight:700;margin:0 0 10px}
+.hk-label{font-size:.8125rem;color:var(--hk-sub);margin:0 0 6px}
+.hk-truck{border:1px solid var(--hk-line);border-radius:12px;padding:10px 12px;margin:8px 0;background:var(--hk-bg)}
+.hk-truck.hk-main{border-color:var(--hk-accent);background:var(--hk-soft)}
+.hk-tname{font-size:1.25rem;font-weight:700;margin:0}
+.hk-tload,.hk-tnote{font-size:.875rem;margin:2px 0 0}
+.hk-tnote{color:var(--hk-sub)}
+.hk-sum{font-size:.875rem;margin:10px 0 4px}
+.hk-must{font-size:.8125rem;color:var(--hk-sub);border-left:4px solid var(--hk-accent);padding:4px 10px;margin:8px 0}
+.hk-big{margin-top:10px;font-size:.875rem}
+.hk-big ul{margin:4px 0 0;padding-left:1.2em}
+.hk-big a{display:inline-block;min-height:40px;padding:6px 0}
+.hk-cta{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.hk-cta a{flex:1 1 auto;text-align:center;border-radius:999px;padding:12px 16px;min-height:48px;font-weight:700;background:var(--hk-accent);color:#fff;text-decoration:none}
+.hk-prtag{font-size:.8125rem;font-weight:700;color:var(--hk-sub);border:1px solid var(--hk-line);border-radius:6px;padding:1px 6px}
+.hk-chips{display:flex;flex-wrap:wrap;gap:6px}
+.hk-chips button{border:1px solid var(--hk-line);background:var(--hk-card);border-radius:999px;padding:8px 14px;min-height:44px}
+.hk-chips button[aria-pressed="true"]{border-color:var(--hk-ink);background:var(--hk-ink);color:var(--hk-card);font-weight:700}
+.hk-in{display:flex;align-items:center;border:1px solid var(--hk-line);border-radius:10px;background:var(--hk-bg);padding:0 8px}
+.hk-in input{width:100%;min-width:0;border:0;background:none;color:var(--hk-ink);font-size:max(16px,1.15rem);font-weight:700;padding:8px 0;min-height:46px}
+.hk-in input:focus{outline:none}
+.hk-in:focus-within{border-color:var(--hk-accent);box-shadow:0 0 0 3px var(--hk-soft)}
+.hk-in span{font-size:.8125rem;color:var(--hk-sub)}
+.hk-boxn{display:flex;flex-direction:column;gap:4px;font-size:.8125rem;color:var(--hk-sub);margin-top:10px;max-width:260px}
+.hk-dims{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.hk-dims label{display:flex;flex-direction:column;justify-content:space-between;gap:4px;font-size:.8125rem;color:var(--hk-sub);min-width:0}
+.hk-row{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid var(--hk-line);padding:6px 0}
+.hk-iname{min-width:0;overflow-wrap:anywhere}
+.hk-isize{display:block;font-size:.75rem;color:var(--hk-sub)}
+.hk-step3{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.hk-step3 button{min-width:44px;min-height:44px;border:1px solid var(--hk-line);background:var(--hk-card);border-radius:10px;font-size:1.1rem}
+.hk-step3 button:disabled{opacity:.4;cursor:default}
+.hk-step3 span{min-width:1.5em;text-align:center;font-weight:700}
+.hk-add{margin-top:12px}
+.hk-add summary{cursor:pointer;font-weight:700;color:var(--hk-accent);min-height:44px;display:flex;align-items:center}
+.hk-btn2{margin-top:10px;min-height:44px;padding:8px 16px;border-radius:999px;border:1px solid var(--hk-accent);background:var(--hk-card);color:var(--hk-accent);font-weight:700}
+.hk-how{font-size:.9375rem;margin-top:24px}
+.hk-how ul{padding-left:1.2em}
+.hk-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:8px;border:0;border-radius:14px;
+  background:var(--hk-ink);color:var(--hk-card)!important;padding:12px 16px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.hk-barhint{font-size:.8125rem;font-weight:400;opacity:.85}
+/* 搬入経路 */
+.hk-sec{border:1px solid var(--hk-line);border-radius:12px;padding:10px 12px;margin:8px 0;background:var(--hk-bg)}
+.hk-sec>label.hk-on{display:flex;align-items:center;gap:8px;font-weight:700;min-height:44px}
+.hk-sec>label.hk-on input{width:22px;height:22px}
+.hk-verdict{display:flex;gap:10px;align-items:flex-start;border-radius:10px;padding:8px 10px;margin:6px 0}
+.hk-v-ok{background:var(--hk-okbg);color:var(--hk-ok)}
+.hk-v-chk{background:var(--hk-chkbg);color:var(--hk-chk)}
+.hk-v-ng{background:var(--hk-ngbg);color:var(--hk-ng)}
+.hk-vlabel{font-weight:700;flex:0 0 auto}
+.hk-vtext{font-size:.875rem;color:var(--hk-ink)}
+.hk-overall{font-size:1.2rem;font-weight:700;margin:4px 0 8px}
+@media (min-width:861px){
+  .hk h1{font-size:1.8rem}
+  .hk-bar{display:none}
+  .hk-dims{grid-template-columns:repeat(4,1fr)}
+}
+.hk-pick{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+.hk-pick select{width:100%;min-height:46px;border:1px solid var(--hk-line);border-radius:10px;background:var(--hk-card);color:var(--hk-ink);font:inherit;font-size:max(16px,1rem);padding:6px 8px}
+.hk-check{display:flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;font-size:.9375rem}
+.hk-check input{width:22px;height:22px}
+/* 第2回の外部評価の直し（2026-10-12） */
+.hk-step,.hk-result{position:relative}
+.hk-tag{display:inline-block;font-size:.75rem;font-weight:700;color:var(--hk-sub);border:1px solid var(--hk-line);border-radius:6px;padding:0 6px;margin:0 0 6px}
+.hk-exsub{display:block;font-size:.75rem;font-weight:400;color:var(--hk-sub);margin-top:2px}
+.hk-note{font-size:.8125rem;color:var(--hk-sub);margin:6px 0;line-height:1.6}
+.hk-sub{font-size:.875rem;font-weight:700;margin:0 0 4px}
+.hk-prog{font-size:.8125rem;color:var(--hk-sub);margin:0 0 4px}
+.hk-sublabel{font-size:.8125rem;font-weight:700;color:var(--hk-sub);margin:10px 0 4px}
+/* 判定の記号＋色＋文字。色は枠（司令塔）の style.css の .jg.ok/.chk/.ng が優先（ここは無いときの既定値） */
+.hk :where(.jg){display:inline-block;font-weight:700;border-radius:6px;padding:1px 8px;white-space:nowrap}
+.hk :where(.jg.ok){color:var(--hk-ok);background:var(--hk-okbg)}
+.hk :where(.jg.chk){color:var(--hk-chk);background:var(--hk-chkbg)}
+.hk :where(.jg.ng){color:var(--hk-ng);background:var(--hk-ngbg)}
+.hk-vlist{margin:8px 0}
+.hk-vrow{display:grid;grid-template-columns:auto 1fr;gap:2px 8px;align-items:center;border-bottom:1px solid var(--hk-line);border-left:4px solid transparent;padding:6px 8px}
+.hk-vrow .jg{justify-self:start;font-size:.8125rem}
+.hk-vname{font-weight:700;font-size:.875rem}
+.hk-vtext{grid-column:1/-1;font-size:.8125rem;color:var(--hk-sub);margin:0}
+.hk-worst{border-left-color:var(--hk-accent);background:var(--hk-soft)}
+.hk-opts{margin:6px 0 0;padding-left:1.2em;font-size:.875rem}
+.hk-opts li{padding:4px 0}
+.hk-sec .hk-cant{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:.8125rem;color:var(--hk-sub)}
+.hk-sec .hk-cant input{width:20px;height:20px}
+.hk-chipsl{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.hk-chip{display:inline-flex;align-items:center;min-height:36px;font-size:.8125rem;border:1px solid var(--hk-line);border-radius:999px;padding:4px 12px;background:var(--hk-card);text-decoration:none}
+.hk-nodata{font-size:.75rem;color:var(--hk-sub)}
+.hk-nodata button{border:0;background:none;color:var(--hk-accent);text-decoration:underline;padding:0 0 0 4px;min-height:44px;font-size:.8125rem}
+.hk-more{margin-top:12px}
+.hk-more summary{cursor:pointer;font-weight:700;color:var(--hk-accent);min-height:44px;display:flex;align-items:center}
+@keyframes hk-pulse{from{box-shadow:0 0 0 6px var(--hk-soft)}to{box-shadow:0 0 0 0 transparent}}
+.hk-upd{animation:hk-pulse .7s ease-out}
+@media (prefers-reduced-motion:reduce){.hk-upd{animation:none}}
+.hk-need{margin:4px 0 8px;font-size:.875rem;font-weight:700}
+.hk-need .num-big{display:block;line-height:1.15}
+.hk-tname .num-big,.hk-sum .num-big{line-height:1.15}
+/* 第8案（2026-10-19）：結果の3段表示・区間のゲージ・荷台の概念図・区分のはしご・入力の大きさ。色は枠の --accent-ink 等があればそれを使う */
+.hk{--hk-ink2:var(--accent-ink,#1e6c75);--hk-sand:var(--sand,#f6f1e7)}
+.hk-first{font-weight:700;font-size:.95rem;line-height:1.6;background:var(--hk-soft);border-radius:10px;padding:10px 12px;margin:0 0 12px}
+.hk-quick{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 12px}
+.hk-quick button{min-height:44px;padding:8px 14px;border:1.5px solid var(--hk-line);background:var(--hk-card);border-radius:999px;font-weight:700;font-size:.9rem}
+.hk-quick button[aria-pressed="true"]{background:var(--hk-ink2);border-color:var(--hk-ink2);color:#fff}
+.hk-guide{background:var(--hk-sand);border-left:4px solid #d9a300;border-radius:0 10px 10px 0;padding:10px 14px;margin:0 0 8px;font-size:.95rem}
+.hk-head{font-size:1.12rem;font-weight:700;line-height:1.55;margin:2px 0 8px;text-wrap:pretty}
+.hk-vh{border-radius:12px;padding:12px 14px;margin:0 0 12px;border-left:6px solid var(--hk-ink2);background:var(--hk-soft)}
+.hk-vh .hk-head{margin:0 0 6px}
+.hk-vh .hk-overall{margin:0 0 4px;font-size:1.15rem}
+.hk-vh .hk-overall .jg{font-size:1.05rem;padding:3px 12px}
+.hk-vh-chk{border-left-color:#d9a300;background:var(--hk-sand)}
+.hk-vh-ng{border-left-color:#b3261e;background:#fbecea}
+.hk-basis{font-size:.85rem;color:var(--hk-sub);margin:4px 0 8px;line-height:1.6}
+/* 区間のゲージ：灰色の斜線＝壁、白＝通り道、色の箱＝物の断面、点線＝左右の余裕を足した幅 */
+.hk-gauge{grid-column:1/-1;margin:6px 0 2px}
+.hk-g-track{position:relative;height:30px;border-radius:6px;background:repeating-linear-gradient(135deg,#d5dedf 0 6px,#e8eeef 6px 12px)}
+.hk-g-open{position:absolute;top:0;bottom:0;background:#fff;border-left:2px solid #8fa3a6;border-right:2px solid #8fa3a6}
+.hk-g-need{position:absolute;top:3px;bottom:3px;border:2px dashed var(--hk-ink2);border-radius:4px;box-sizing:border-box}
+.hk-g-item{position:absolute;top:7px;bottom:7px;border-radius:3px;color:#fff;font-size:.72rem;font-weight:700;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--hk-ink2)}
+.hk-g-item.chk{background:#c08a00}.hk-g-item.ng{background:#b3261e}
+.hk-g-legend{display:flex;flex-wrap:wrap;gap:4px 12px;margin:4px 0 0;font-size:.75rem;color:var(--hk-sub)}
+.hk-g-legend span{display:inline-flex;align-items:center;gap:4px}
+.hk-g-k{display:inline-block;width:14px;height:10px;border-radius:2px}
+.hk-g-k.open{background:#fff;border:1.5px solid #8fa3a6}.hk-g-k.need{border:1.5px dashed var(--hk-ink2)}
+.hk-g-k.item{background:var(--hk-ink2)}.hk-g-k.item.chk{background:#c08a00}.hk-g-k.item.ng{background:#b3261e}
+/* 荷台の概念図 */
+.hk-tk{display:block;width:100%;max-width:340px;height:auto;margin:8px 0 4px}
+.hk-tk-bed{fill:#fff}.hk-tk-line{fill:none;stroke:var(--hk-ink2);stroke-width:2.5}
+.hk-tk-box{fill:var(--hk-accent)}.hk-tk-seam{stroke:#fff;stroke-width:1.5;fill:none}
+.hk-tk-cab{fill:var(--hk-ink2)}.hk-tk-win{fill:#dff0f2}.hk-tk-wh{fill:#2c3a3c;stroke:#fff;stroke-width:3}
+/* 区分のはしご */
+.hk .hk-ladder{margin:14px 0 6px}
+.hk .hk-lrow{display:grid;grid-template-columns:8.6em 1fr auto;gap:2px 10px;align-items:center;padding:7px 10px;border-radius:8px;font-size:.85rem;color:var(--hk-sub)}
+.hk .hk-lrow.on{background:var(--hk-soft);color:var(--hk-ink);box-shadow:inset 4px 0 0 var(--hk-ink2)}
+.hk .hk-lrow.also{background:var(--hk-sand)}
+.hk .hk-lname{font-weight:700;color:var(--hk-ink)}
+.hk .hk-lbar{height:10px;border-radius:5px;background:#dfe8ea;overflow:hidden}
+.hk .hk-lbar i{display:block;height:100%;background:var(--hk-accent);border-radius:5px}
+.hk .hk-lrow.on .hk-lbar i{background:var(--hk-ink2)}
+.hk .hk-lrow.over .hk-lbar i{background:repeating-linear-gradient(135deg,#c9a9a5 0 5px,#e2c8c4 5px 10px)}
+.hk .hk-lst{font-size:.78rem;font-weight:700;white-space:nowrap}
+.hk .hk-lrow.on .hk-lst{color:var(--hk-ink2)}.hk .hk-lrow.over .hk-lst{color:#9b2c2c}
+.hk .hk-lload{grid-column:1/-1;font-size:.78rem}
+/* 入力とボタンの大きさ（第5回②③：欄48px以上・ボタンは全幅で48〜52px） */
+.hk-in input{min-height:48px}
+.hk-btn2{display:block;width:100%;min-height:50px}
+.hk-cta a{min-height:50px;display:flex;align-items:center;justify-content:center}
+.hk-g-mark{position:absolute;top:-3px;bottom:-3px;width:0;border-left:2px dashed var(--hk-ink2)}
+.hk-g-k.mark{width:0;height:12px;border-left:2px dashed var(--hk-ink2);border-radius:0}
+.hk-tsm{display:block;font-size:.8rem;font-weight:700;color:var(--hk-sub);letter-spacing:.04em}
+.hk-truck .hk-basis{margin:6px 0 0}

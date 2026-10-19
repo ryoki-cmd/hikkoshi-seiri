@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>荷物量とトラックの大きさ｜ひっこし整えメモ</title>
+<meta name="description" content="持ち物を選ぶと、必要なトラックの大きさと段ボールの数の目安が出ます">
+<meta name="robots" content="max-image-preview:large">
+<link rel="canonical" href="https://hikkoshi-seiri.com/nimotsu/index.html">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#edf2f3">
+<meta property="og:title" content="荷物量とトラックの大きさ｜ひっこし整えメモ"><meta property="og:description" content="持ち物を選ぶと、必要なトラックの大きさと段ボールの数の目安が出ます"><meta property="og:type" content="website"><meta property="og:site_name" content="ひっこし整えメモ"><meta property="og:image" content="https://hikkoshi-seiri.com/og/site.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=36b82ec4">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="nimotsu.css?v=e7bc3831">
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<header><div class="bar-wrap"><div class="wrap bar">
+<a class="logo" href="../index.html"><img src="../icon.svg" alt="" width="34" height="34">ひっこし整えメモ</a>
+<nav class="navlinks" aria-label="主なページ"><a href="../nimotsu/index.html" class="on" aria-current="page">荷物量→トラック</a><a href="../hannyu/index.html">搬入チェック</a><a href="../pages/index.html">ページ一覧</a></nav><div class="sns"><button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span aria-hidden="true">☰</span>メニュー</button></div>
+</div></div>
+<nav class="wrap chips" aria-label="主なページ"><a href="../index.html">ホーム</a><a href="../nimotsu/index.html" class="on" aria-current="page">荷物量→トラック</a><a href="../hannyu/index.html">搬入チェック</a><a href="../pages/index.html">ページ一覧</a><a href="../pages/index.html#procedure">手続き</a><a href="../pages/index.html#appliance">家電</a></nav>
+<div id="menu" class="menu" hidden><div class="menu-bg"></div><div class="menu-panel" role="dialog" aria-modal="true" aria-label="メニュー" tabindex="-1">
+<div class="menu-head"><b>メニュー</b><button class="menu-close" type="button" aria-label="閉じる">×</button></div><a href="../index.html">ホーム</a><a href="../nimotsu/index.html" class="on" aria-current="page">荷物量とトラックの大きさ</a><a href="../hannyu/index.html">搬入経路チェック</a><a href="../pages/index.html#truck">トラックに何が載るか</a><a href="../pages/index.html#route">搬入経路</a><a href="../pages/index.html#volume">荷物量の目安</a><a href="../pages/index.html#procedure">手続きと期限</a><a href="../pages/index.html#appliance">大型家電の扱い</a><small>その他</small><a href="../about.html">このサイトについて</a><a href="../method.html">データと判定の決め方</a><a href="../contact.html">お問い合わせ</a></div></div>
+</header>
+<main class="wrap" id="main"><section class="tool"><div class="hk" id="nimotsu" data-src="catalog.json">
+  <section class="hk-hero band"><div class="hk-hero-txt">
+    <h1>荷物の量から、引っ越しトラックの大きさを出す</h1>
+    <p>持っていく家具・家電と段ボールの数を選ぶと、荷物の体積を合計して、日本通運が公開しているトラックの積載の目安と比べて、寸法上の候補を出します。費用は会社・時期・距離で変わるので、ここでは出しません。</p>
+  </div><div class="hk-hero-img"><img src="../img/group-truck.jpg" width="1200" height="800" alt="" decoding="async"><span class="credit">イメージ図（AI生成。実物・実測ではありません）</span></div></section><ol class="hk-steps" aria-label="使い方"><li><span class="hk-n">1</span>何人で住むか</li><li><span class="hk-n">2</span>段ボールの数</li><li><span class="hk-n">3</span>持っていく家具・家電</li><li><span class="hk-n">4</span>トラックの候補を見る</li></ol>
+
+  <section class="hk-step">
+    <p class="hk-tag">入力</p>
+    <p class="hk-first">人数と段ボールの数、持っていく家具・家電を選ぶと、下にトラックの候補が出ます。</p>
+    <h2><span class="hk-n">1</span>何人で住んでいますか</h2>
+    <div class="hk-chips" id="nmPeople" role="group" aria-label="人数">
+      <button type="button" data-v="1" aria-pressed="true">1人</button>
+      <button type="button" data-v="2" aria-pressed="false">2人</button>
+      <button type="button" data-v="3" aria-pressed="false">3人</button>
+      <button type="button" data-v="4" aria-pressed="false">4人以上</button>
+    </div>
+    <h2><span class="hk-n">2</span>段ボールの数</h2>
+    <div class="hk-chips" id="nmAmount" role="group" aria-label="服・本・食器の量">
+      <button type="button" data-v="low" aria-pressed="false">物は少なめ</button>
+      <button type="button" data-v="mid" aria-pressed="true">ふつう</button>
+      <button type="button" data-v="high" aria-pressed="false">多め</button>
+    </div>
+    <label class="hk-boxn"><span>段ボール（Mサイズ 50×40×40cm）</span><span class="hk-in"><input id="nmBoxes" inputmode="numeric" autocomplete="off"><span>箱</span></span></label>
+    <p class="hk-hint" id="nmBoxHint"></p>
+  </section>
+
+  <section class="hk-step">
+    <p class="hk-tag">入力</p>
+    <h2><span class="hk-n">3</span>持っていく家具・家電</h2>
+    <p class="hk-hint">寸法は、家電は商品データの中央値、家具はYahoo!ショッピングの出品の中央値、段ボール・布団袋は引越し会社の公式の値です。よく使う品目を先に出しています。ほかの品目は「すべての品目を見る」、自分の家具は「寸法を入れて追加」で足せます。</p>
+    <div id="nmItemsTop"></div>
+    <details class="hk-more"><summary>すべての品目を見る</summary><div id="nmItemsRest"></div></details>
+    <details class="hk-add" id="nmAdd">
+      <summary>寸法を入れて追加</summary>
+      <div class="hk-dims">
+        <label><span>名前</span><span class="hk-in"><input id="nmCName" autocomplete="off" placeholder="例 3人掛けソファ"></span></label>
+        <label><span>幅</span><span class="hk-in"><input id="nmCW" inputmode="decimal" autocomplete="off"><span>cm</span></span></label>
+        <label><span>奥行</span><span class="hk-in"><input id="nmCD" inputmode="decimal" autocomplete="off"><span>cm</span></span></label>
+        <label><span>高さ</span><span class="hk-in"><input id="nmCH" inputmode="decimal" autocomplete="off"><span>cm</span></span></label>
+      </div>
+      <button type="button" class="hk-btn2" id="nmCAdd">追加する</button>
+    </details>
+  </section>
+
+  <section class="hk-result" id="nmResult" aria-live="polite">
+    <!-- 一人暮らしの例の結果（JS が動かないとき用。JS が読み込まれると同じ形で出し直す） -->
+    <p class="hk-tag">結果</p>
+    <p class="hk-exband">例：一人暮らしのよくある荷物<span class="hk-exsub">上の入力を変えると自動で出し直します</span></p>
+    <p class="hk-head">この荷物なら、2トン車が候補です。</p>
+    <div class="hk-truck hk-main"><p class="hk-tname"><span class="hk-tsm">トラックの候補</span><span class="num-big">2トン車</span></p>
+    <svg class="hk-tk" viewBox="0 0 240 104" role="img" aria-label="荷台の目安の約46%"><defs><pattern id="hkBx" width="18" height="16" patternUnits="userSpaceOnUse"><rect width="18" height="16" class="hk-tk-box"></rect><path d="M0 .75H18M.75 0V16" class="hk-tk-seam"></path></pattern></defs><rect x="10" y="8" width="150" height="66" rx="4" class="hk-tk-bed"></rect><rect x="90.8" y="10" width="69.2" height="62" fill="url(#hkBx)"></rect><rect x="10" y="8" width="150" height="66" rx="4" class="hk-tk-line"></rect><path d="M166 26h38l22 22v26h-60z" class="hk-tk-cab"></path><path d="M174 32h27l15 16h-42z" class="hk-tk-win"></path><rect x="6" y="74" width="222" height="8" rx="2" class="hk-tk-cab"></rect><circle cx="42" cy="86" r="11" class="hk-tk-wh"></circle><circle cx="124" cy="86" r="11" class="hk-tk-wh"></circle><circle cx="200" cy="86" r="11" class="hk-tk-wh"></circle></svg><p class="hk-basis">根拠　推定 約4.5㎥は、積載の目安（約5〜10㎥）の上限の約46%。図は割合を示す概念図で、実際の積み方ではありません。</p>
+    </div>
+    <p class="hk-sum">外形の合計 約4㎥（家具・家電＋段ボールM 15箱）× 積み方の余裕1.2 ＝ 推定 <span class="num-big small">約4.5㎥</span></p>
+    <div class="hk-ladder"><p class="hk-sublabel">区分ごとの積載の目安と、今の荷物（約4.5㎥）</p>
+    <div class="hk-lrow over"><span class="hk-lname">単身向けボックス</span><span class="hk-lbar"><i style="width:100%"></i></span><span class="hk-lst">収まらない</span><span class="hk-lload">約1.7㎥×2本まで</span></div>
+    <div class="hk-lrow on"><span class="hk-lname">2トン車</span><span class="hk-lbar"><i style="width:46%"></i></span><span class="hk-lst">候補</span><span class="hk-lload">約5〜10㎥・単身者、荷物少なめ</span></div>
+    <div class="hk-lrow"><span class="hk-lname">2トンロング車</span><span class="hk-lbar"><i style="width:31%"></i></span><span class="hk-lst">入る</span><span class="hk-lload">約10〜15㎥・単身者〜2人世帯</span></div>
+    <div class="hk-lrow"><span class="hk-lname">4トンロング車</span><span class="hk-lbar"><i style="width:18%"></i></span><span class="hk-lst">入る</span><span class="hk-lload">約20〜25㎥・2〜3人家族</span></div>
+    <div class="hk-lrow"><span class="hk-lname">10トン車</span><span class="hk-lbar"><i style="width:10%"></i></span><span class="hk-lst">入る</span><span class="hk-lload">約40〜45㎥・大家族</span></div>
+    </div><p class="hk-note">前提：荷台の大きさは積める量そのものではなく、実際の車は引越し会社が荷物を見て決めます。2トン車の目安より少なめで、軽トラックで足りる場合もあります。（<a href="../method.html">詳しく</a>）</p>
+  </section>
+
+  <section class="hk-how">
+    <h2>計算のしかた</h2>
+    <p>品目ごとの外形（幅×奥行×高さ）の体積を足し、積み方のすき間や形の悪い家具の分として1.2倍しています。この1.2倍はこのサイトの仮定で、公開されたデータはありません。</p>
+    <p>トラックの区分と積載の目安は、日本通運の公開している表（2トン車 約5〜10㎥、2トンロング車 約10〜15㎥、4トンロング車 約20〜25㎥、10トン車 約40〜45㎥）です。日本通運は「荷台サイズは積める荷物量そのものではなく、家具の形状や梱包状態によって実際の積載量は変動する」としています。境目に近いとき（上限の前後15%）は、大きいほうの区分も並べて出します。15%は言い切らないための便宜的な幅です。体積は細かい数字を出さず、5㎥未満は0.5㎥刻み、それ以上は1㎥刻みに丸めて示します。くわしくは<a href="../method.html">データと判定の決め方</a>へ。</p>
+    <div id="nmSources"></div>
+  </section>
+</div>
+</section><script src="nimotsu.js?v=02dde68e" defer></script></main>
+<footer class="wrap"><div class="links"><a href="../about.html">このサイトについて</a><a href="../method.html">データと判定の決め方</a><a href="../privacy.html">プライバシーポリシー</a><a href="../contact.html">お問い合わせ</a></div>
+<p class="meta">ひっこし整えメモは、引っ越しの疑問を公開データと仕様の数字で確かめる個人のサイトです。広告（アフィリエイト）を含むページには、その場所に「広告」「PR」と表示しています。</p>
+<p class="meta">画像について：サイト内のイラストは AI で生成したイメージで、実物や実測の写真ではありません。</p>
+<p class="meta">© 2026 ひっこし整えメモ・家具の寸法は Yahoo!ショッピングの出品の集計（<a href="https://developer.yahoo.co.jp/sitemap/" rel="noopener" target="_blank">Web Services by Yahoo! JAPAN</a>）</p></footer>
+<script>
+(function(){var b=document.querySelector('.menu-btn'),m=document.getElementById('menu');if(!b||!m)return;var c=m.querySelector('.menu-close'),bg=m.querySelector('.menu-bg'),p=m.querySelector('.menu-panel');
+var back=document.querySelectorAll('.bar-wrap,nav.chips,main,footer');
+function open(){m.hidden=false;document.body.classList.add('menu-open');b.setAttribute('aria-expanded','true');back.forEach(function(e){e.inert=true});p.focus()}
+function close(){m.hidden=true;document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');back.forEach(function(e){e.inert=false});b.focus()}
+b.addEventListener('click',open);c.addEventListener('click',close);bg.addEventListener('click',close);document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)close()})})();
+</script>
+</body>
+</html>

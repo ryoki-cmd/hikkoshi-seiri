@@ -1,0 +1,1595 @@
+{
+ "updated": "2026-10-19",
+ "trucks": [
+  {
+   "id": "box",
+   "name": "単身向けボックス",
+   "load": [
+    0,
+    1.7
+   ],
+   "bed": null,
+   "note": "ヤマト「わたしの引越」1本（幅100×奥行100×高さ170cm）、2本なら約3.4㎥。日本通運「単身パックL」は横幅108×奥行104×高さ175cm",
+   "src": [
+    {
+     "name": "ヤマトホームコンビニエンス公式（わたしの引越）",
+     "url": "https://www.008008.jp/moving/single/ads/others/"
+    },
+    {
+     "name": "日本通運公式（単身パックL）",
+     "url": "https://www.nittsu.co.jp/hikkoshi/moving-s/tanshinpack-s-l/"
+    }
+   ],
+   "max_item": {
+    "w": 100,
+    "d": 100,
+    "h": 170
+   }
+  },
+  {
+   "id": "2t",
+   "name": "2トン車",
+   "load": [
+    5,
+    10
+   ],
+   "bed": [
+    300,
+    178,
+    184.5
+   ],
+   "note": "単身者、荷物少なめ",
+   "src": [
+    {
+     "name": "日本通運公式（引っ越しトラック）",
+     "url": "https://www.nipponexpress.com/jp/ja/site/hikkoshi/about/transport/"
+    }
+   ]
+  },
+  {
+   "id": "2tl",
+   "name": "2トンロング車",
+   "load": [
+    10,
+    15
+   ],
+   "bed": [
+    400,
+    179,
+    200
+   ],
+   "note": "単身者〜2人世帯",
+   "src": [
+    {
+     "name": "日本通運公式（引っ越しトラック）",
+     "url": "https://www.nipponexpress.com/jp/ja/site/hikkoshi/about/transport/"
+    }
+   ]
+  },
+  {
+   "id": "4tl",
+   "name": "4トンロング車",
+   "load": [
+    20,
+    25
+   ],
+   "bed": [
+    620,
+    230,
+    230
+   ],
+   "note": "2〜3人家族",
+   "src": [
+    {
+     "name": "日本通運公式（引っ越しトラック）",
+     "url": "https://www.nipponexpress.com/jp/ja/site/hikkoshi/about/transport/"
+    }
+   ]
+  },
+  {
+   "id": "10t",
+   "name": "10トン車",
+   "load": [
+    40,
+    45
+   ],
+   "bed": [
+    960,
+    230,
+    240
+   ],
+   "note": "大家族",
+   "src": [
+    {
+     "name": "日本通運公式（引っ越しトラック）",
+     "url": "https://www.nipponexpress.com/jp/ja/site/hikkoshi/about/transport/"
+    }
+   ]
+  }
+ ],
+ "boxes": {
+  "src": {
+   "name": "アート引越センター公式（ダンボール・資材）",
+   "url": "https://www.the0123.com/about/material/cardboard.html"
+  },
+  "per_people": {
+   "1": [
+    10,
+    20
+   ],
+   "2": [
+    30,
+    40
+   ],
+   "3": [
+    40,
+    60
+   ],
+   "4": [
+    60,
+    90
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "box-s",
+   "name": "段ボール S（本・食器）",
+   "cat": "box",
+   "w": 40,
+   "d": 37.5,
+   "h": 35,
+   "src": {
+    "name": "アート引越センター公式（ダンボール・資材）",
+    "url": "https://www.the0123.com/about/material/cardboard.html"
+   }
+  },
+  {
+   "id": "box-m",
+   "name": "段ボール M（服など）",
+   "cat": "box",
+   "w": 50,
+   "d": 40,
+   "h": 40,
+   "src": {
+    "name": "アート引越センター公式（ダンボール・資材）",
+    "url": "https://www.the0123.com/about/material/cardboard.html"
+   }
+  },
+  {
+   "id": "futon",
+   "name": "布団袋（布団1組）",
+   "cat": "bedding",
+   "w": 95,
+   "d": 63,
+   "h": 90,
+   "src": {
+    "name": "アート引越センター公式（ダンボール・資材）",
+    "url": "https://www.the0123.com/about/material/cardboard.html"
+   }
+  },
+  {
+   "id": "hanger",
+   "name": "ハンガーBOX",
+   "cat": "clothes",
+   "w": 50,
+   "d": 56,
+   "h": 100,
+   "src": {
+    "name": "アート引越センター公式（ダンボール・資材）",
+    "url": "https://www.the0123.com/about/material/cardboard.html"
+   }
+  },
+  {
+   "id": "fridge-s",
+   "name": "冷蔵庫 〜150L",
+   "cat": "appliance",
+   "upright": true,
+   "w": 47.0,
+   "d": 50.0,
+   "h": 86.2,
+   "n": 45,
+   "src": {
+    "name": "家電データ 45機種の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "fridge-m",
+   "name": "冷蔵庫 151〜300L",
+   "cat": "appliance",
+   "upright": true,
+   "w": 53.0,
+   "d": 60.0,
+   "h": 149.6,
+   "n": 23,
+   "src": {
+    "name": "家電データ 23機種の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "fridge-l",
+   "name": "冷蔵庫 301〜450L",
+   "cat": "appliance",
+   "upright": true,
+   "w": 63.5,
+   "d": 66.5,
+   "h": 180.7,
+   "n": 15,
+   "src": {
+    "name": "家電データ 15機種の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "fridge-xl",
+   "name": "冷蔵庫 451L〜",
+   "cat": "appliance",
+   "upright": true,
+   "w": 68.5,
+   "d": 69.9,
+   "h": 183.3,
+   "n": 9,
+   "src": {
+    "name": "家電データ 9機種の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "washer-top",
+   "name": "洗濯機（縦型）",
+   "cat": "appliance",
+   "upright": true,
+   "w": 56.5,
+   "d": 56.6,
+   "h": 93.5,
+   "n": 30,
+   "src": {
+    "name": "家電データ 30機種の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "washer-drum",
+   "name": "洗濯機（ドラム式）",
+   "cat": "appliance",
+   "upright": true,
+   "w": 59.8,
+   "d": 64.5,
+   "h": 88.4,
+   "n": 10,
+   "src": {
+    "name": "家電データ 10機種の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "sofa-2",
+   "name": "2人掛けソファ",
+   "cat": "furniture",
+   "w": 166.0,
+   "d": 76.0,
+   "h": 70.0,
+   "n": 26,
+   "vol_q": [
+    0.665,
+    0.984
+   ],
+   "src": {
+    "name": "Yahoo!ショッピングの出品26件の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "sofa-3",
+   "name": "3人掛けソファ",
+   "cat": "furniture",
+   "w": 173.5,
+   "d": 78.0,
+   "h": 72.0,
+   "n": 10,
+   "vol_q": [
+    0.866,
+    1.051
+   ],
+   "src": {
+    "name": "Yahoo!ショッピングの出品10件の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "bedframe-s",
+   "name": "ベッドフレーム シングル",
+   "cat": "bed",
+   "w": 98.0,
+   "d": 207.0,
+   "h": 61.0,
+   "n": 48,
+   "vol_q": [
+    0.724,
+    1.401
+   ],
+   "src": {
+    "name": "Yahoo!ショッピングの出品48件の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "bedframe-sd",
+   "name": "ベッドフレーム セミダブル",
+   "cat": "bed",
+   "w": 121.0,
+   "d": 207.0,
+   "h": 60.0,
+   "n": 43,
+   "vol_q": [
+    0.929,
+    1.836
+   ],
+   "src": {
+    "name": "Yahoo!ショッピングの出品43件の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "desk",
+   "name": "机（パソコンデスク）",
+   "cat": "furniture",
+   "w": 100.0,
+   "d": 60.0,
+   "h": 79.0,
+   "n": 30,
+   "vol_q": [
+    0.398,
+    0.66
+   ],
+   "src": {
+    "name": "Yahoo!ショッピングの出品30件の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "bookshelf",
+   "name": "本棚",
+   "cat": "furniture",
+   "w": 60.0,
+   "d": 29.0,
+   "h": 91.5,
+   "n": 74,
+   "vol_q": [
+    0.12,
+    0.315
+   ],
+   "src": {
+    "name": "Yahoo!ショッピングの出品74件の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "tvstand",
+   "name": "テレビ台",
+   "cat": "furniture",
+   "w": 110.5,
+   "d": 39.5,
+   "h": 36.0,
+   "n": 28,
+   "vol_q": [
+    0.124,
+    0.204
+   ],
+   "src": {
+    "name": "Yahoo!ショッピングの出品28件の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "chest",
+   "name": "チェスト（5段）",
+   "cat": "furniture",
+   "w": 54.5,
+   "d": 41.5,
+   "h": 101.0,
+   "n": 75,
+   "vol_q": [
+    0.153,
+    0.29
+   ],
+   "src": {
+    "name": "Yahoo!ショッピングの出品75件の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "microwave",
+   "name": "電子レンジ",
+   "cat": "appliance",
+   "w": 45.7,
+   "d": 35.1,
+   "h": 28.2,
+   "n": 26,
+   "vol_q": [
+    0.041,
+    0.047
+   ],
+   "src": {
+    "name": "Yahoo!ショッピングの出品26件の中央値",
+    "url": ""
+   }
+  },
+  {
+   "id": "dining",
+   "name": "ダイニングテーブル（2人）",
+   "cat": "furniture",
+   "w": 77.7,
+   "d": 70.0,
+   "h": 72.0,
+   "n": 56,
+   "vol_q": [
+    0.363,
+    0.478
+   ],
+   "src": {
+    "name": "Yahoo!ショッピングの出品56件の中央値",
+    "url": ""
+   }
+  }
+ ],
+ "mattress": [
+  {
+   "id": "mattress-s",
+   "name": "マットレス シングル",
+   "cat": "bed",
+   "w": 97,
+   "d": 195,
+   "h": null,
+   "src": {
+    "name": "フランスベッド公式（マットレスのサイズ）",
+    "url": "https://interior.francebed.co.jp/spring/faq/about-mattress/size.php"
+   }
+  },
+  {
+   "id": "mattress-sd",
+   "name": "マットレス セミダブル",
+   "cat": "bed",
+   "w": 120,
+   "d": 195,
+   "h": null,
+   "src": {
+    "name": "フランスベッド公式（マットレスのサイズ）",
+    "url": "https://interior.francebed.co.jp/spring/faq/about-mattress/size.php"
+   }
+  },
+  {
+   "id": "mattress-d",
+   "name": "マットレス ダブル",
+   "cat": "bed",
+   "w": 140,
+   "d": 195,
+   "h": null,
+   "src": {
+    "name": "フランスベッド公式（マットレスのサイズ）",
+    "url": "https://interior.francebed.co.jp/spring/faq/about-mattress/size.php"
+   }
+  }
+ ],
+ "models": [
+  {
+   "id": "fridge:PRC-B051D",
+   "name": "冷蔵庫 PRC-B051D",
+   "kind": "fridge",
+   "w": 47.0,
+   "d": 44.7,
+   "h": 49.6,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:IRSD-17A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSD-17A",
+   "kind": "fridge",
+   "w": 44.4,
+   "d": 53.6,
+   "h": 151.8,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:IRSD-13A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSD-13A",
+   "kind": "fridge",
+   "w": 47.0,
+   "d": 52.1,
+   "h": 124.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:SR-R4805V2",
+   "name": "冷蔵庫 SR-R4805V2",
+   "kind": "fridge",
+   "w": 43.0,
+   "d": 48.0,
+   "h": 51.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:HR-D16FB",
+   "name": "ハイセンス 冷蔵庫 HR-D16FB",
+   "kind": "fridge",
+   "w": 48.1,
+   "d": 58.6,
+   "h": 127.7,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:SP-47LD",
+   "name": "simplus 冷蔵庫 SP-47LD",
+   "kind": "fridge",
+   "w": 45.0,
+   "d": 47.0,
+   "h": 50.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:SP-90LD2",
+   "name": "simplus 冷蔵庫 SP-90LD2",
+   "kind": "fridge",
+   "w": 45.0,
+   "d": 48.9,
+   "h": 86.4,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:PRR-082D",
+   "name": "アイリスオーヤマ 冷蔵庫 PRR-082D",
+   "kind": "fridge",
+   "w": 48.0,
+   "d": 52.5,
+   "h": 91.5,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:HR-D1701W",
+   "name": "ハイセンス 冷蔵庫 HR-D1701W",
+   "kind": "fridge",
+   "w": 49.0,
+   "d": 55.8,
+   "h": 142.9,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:IRSD-9B",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSD-9B",
+   "kind": "fridge",
+   "w": 47.8,
+   "d": 50.9,
+   "h": 85.2,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:YFR-D111",
+   "name": "山善 冷蔵庫 YFR-D111",
+   "kind": "fridge",
+   "w": 47.4,
+   "d": 49.5,
+   "h": 113.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:IRSN-27A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSN-27A",
+   "kind": "fridge",
+   "w": 54.7,
+   "d": 63.2,
+   "h": 180.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:IRSD-5AL",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSD-5AL",
+   "kind": "fridge",
+   "w": 47.2,
+   "d": 45.0,
+   "h": 49.2,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:JR117ML01",
+   "name": "maxzen 冷蔵庫 JR117ML01",
+   "kind": "fridge",
+   "w": 47.0,
+   "d": 51.1,
+   "h": 114.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:JR085HM01",
+   "name": "maxzen 冷蔵庫 JR085HM01",
+   "kind": "fridge",
+   "w": 47.4,
+   "d": 50.0,
+   "h": 85.7,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:SP-50LD2",
+   "name": "simplus 冷蔵庫 SP-50LD2",
+   "kind": "fridge",
+   "w": 38.5,
+   "d": 40.5,
+   "h": 70.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:JR112ML01",
+   "name": "maxzen 冷蔵庫 JR112ML01",
+   "kind": "fridge",
+   "w": 47.0,
+   "d": 49.8,
+   "h": 104.5,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:PRR-142D",
+   "name": "冷蔵庫 PRR-142D",
+   "kind": "fridge",
+   "w": 48.0,
+   "d": 53.0,
+   "h": 144.5,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRSN-HF24A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSN-HF24A",
+   "kind": "fridge",
+   "w": 56.2,
+   "d": 56.3,
+   "h": 172.5,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:HR-B91HW",
+   "name": "ハイセンス 冷蔵庫 HR-B91HW",
+   "kind": "fridge",
+   "w": 47.5,
+   "d": 50.7,
+   "h": 86.2,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:JR430ML01",
+   "name": "maxzen 冷蔵庫 JR430ML01",
+   "kind": "fridge",
+   "w": 83.9,
+   "d": 66.0,
+   "h": 176.3,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:JR121HM01",
+   "name": "maxzen 冷蔵庫 JR121HM01",
+   "kind": "fridge",
+   "w": 49.5,
+   "d": 55.0,
+   "h": 114.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:GR-Y16BP",
+   "name": "東芝 冷蔵庫 GR-Y16BP",
+   "kind": "fridge",
+   "w": 50.3,
+   "d": 58.0,
+   "h": 124.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:GU165S",
+   "name": "冷蔵庫 GU165S",
+   "kind": "fridge",
+   "w": 44.0,
+   "d": 53.0,
+   "h": 144.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:ZFR-F140",
+   "name": "山善 冷蔵庫 ZFR-F140",
+   "kind": "fridge",
+   "w": 49.5,
+   "d": 55.3,
+   "h": 125.3,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:IRSD-12B",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSD-12B",
+   "kind": "fridge",
+   "w": 48.0,
+   "d": 52.5,
+   "h": 116.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:R-HW62V",
+   "name": "日立 冷蔵庫 R-HW62V",
+   "kind": "fridge",
+   "w": 68.5,
+   "d": 74.0,
+   "h": 183.3,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:GU95S",
+   "name": "冷蔵庫 GU95S",
+   "kind": "fridge",
+   "w": 44.4,
+   "d": 45.6,
+   "h": 85.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:JR253HM01",
+   "name": "maxzen 冷蔵庫 JR253HM01",
+   "kind": "fridge",
+   "w": 54.5,
+   "d": 60.0,
+   "h": 181.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:NR-A80D",
+   "name": "パナソニック 冷蔵庫 NR-A80D",
+   "kind": "fridge",
+   "w": 46.0,
+   "d": 49.6,
+   "h": 69.5,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:JR254ML01",
+   "name": "maxzen 冷蔵庫 JR254ML01",
+   "kind": "fridge",
+   "w": 54.0,
+   "d": 55.0,
+   "h": 176.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:NR-A50D",
+   "name": "パナソニック 冷蔵庫 NR-A50D",
+   "kind": "fridge",
+   "w": 46.0,
+   "d": 49.6,
+   "h": 48.8,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:SJ-H13E",
+   "name": "シャープ 冷蔵庫 SJ-H13E",
+   "kind": "fridge",
+   "w": 48.0,
+   "d": 52.0,
+   "h": 116.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:RCT128BL1JP",
+   "name": "COMFEE' 冷蔵庫 RCT128BL1JP",
+   "kind": "fridge",
+   "w": 47.0,
+   "d": 52.0,
+   "h": 119.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRSE-16A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSE-16A",
+   "kind": "fridge",
+   "w": 47.4,
+   "d": 53.5,
+   "h": 149.6,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:GU65S",
+   "name": "冷蔵庫 GU65S",
+   "kind": "fridge",
+   "w": 44.4,
+   "d": 45.6,
+   "h": 64.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:JR415ML01",
+   "name": "maxzen 冷蔵庫 JR415ML01",
+   "kind": "fridge",
+   "w": 78.2,
+   "d": 63.0,
+   "h": 182.5,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:YFR-51",
+   "name": "山善 冷蔵庫 YFR-51",
+   "kind": "fridge",
+   "w": 47.0,
+   "d": 45.0,
+   "h": 49.6,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:NR-B16C3",
+   "name": "パナソニック 冷蔵庫 NR-B16C3",
+   "kind": "fridge",
+   "w": 49.7,
+   "d": 59.5,
+   "h": 122.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:IRSN-30A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSN-30A",
+   "kind": "fridge",
+   "w": 59.5,
+   "d": 60.0,
+   "h": 185.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:R-HW49V",
+   "name": "日立 冷蔵庫 R-HW49V",
+   "kind": "fridge",
+   "w": 65.0,
+   "d": 65.1,
+   "h": 183.3,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:IRGN-42A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRGN-42A",
+   "kind": "fridge",
+   "w": 75.3,
+   "d": 67.8,
+   "h": 183.6,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:NR-B253T",
+   "name": "パナソニック 冷蔵庫 NR-B253T",
+   "kind": "fridge",
+   "w": 55.5,
+   "d": 63.2,
+   "h": 163.6,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:SJ-TD15R",
+   "name": "シャープ 冷蔵庫 SJ-TD15R",
+   "kind": "fridge",
+   "w": 49.5,
+   "d": 60.0,
+   "h": 120.3,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:YFR-90",
+   "name": "山善 冷蔵庫 YFR-90",
+   "kind": "fridge",
+   "w": 47.4,
+   "d": 44.7,
+   "h": 83.1,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRSN-32B",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSN-32B",
+   "kind": "fridge",
+   "w": 63.5,
+   "d": 68.0,
+   "h": 186.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:AQR-14A",
+   "name": "アクア 冷蔵庫 AQR-14A",
+   "kind": "fridge",
+   "w": 50.0,
+   "d": 56.8,
+   "h": 118.4,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:GR-Y33SC",
+   "name": "東芝 冷蔵庫 GR-Y33SC",
+   "kind": "fridge",
+   "w": 60.0,
+   "d": 66.5,
+   "h": 164.3,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:GR-Y18BP",
+   "name": "東芝 冷蔵庫 GR-Y18BP",
+   "kind": "fridge",
+   "w": 50.3,
+   "d": 58.0,
+   "h": 135.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:MR-C33M",
+   "name": "三菱電機 冷蔵庫 MR-C33M",
+   "kind": "fridge",
+   "w": 60.0,
+   "d": 65.6,
+   "h": 169.8,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:JR-SY15AL",
+   "name": "ハイアール 冷蔵庫 JR-SY15AL",
+   "kind": "fridge",
+   "w": 44.0,
+   "d": 59.9,
+   "h": 139.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:NR-B18C3",
+   "name": "パナソニック 冷蔵庫 NR-B18C3",
+   "kind": "fridge",
+   "w": 49.7,
+   "d": 59.5,
+   "h": 135.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:NR-F50EX1",
+   "name": "パナソニック 冷蔵庫 NR-F50EX1",
+   "kind": "fridge",
+   "w": 65.0,
+   "d": 69.9,
+   "h": 182.8,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:SJ-PD28R",
+   "name": "シャープ 冷蔵庫 SJ-PD28R",
+   "kind": "fridge",
+   "w": 56.0,
+   "d": 66.5,
+   "h": 156.8,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:AQR-17A",
+   "name": "アクア 冷蔵庫 AQR-17A",
+   "kind": "fridge",
+   "w": 53.0,
+   "d": 60.1,
+   "h": 122.5,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:AQR-16A",
+   "name": "アクア 冷蔵庫 AQR-16A",
+   "kind": "fridge",
+   "w": 48.0,
+   "d": 60.0,
+   "h": 139.5,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:AQR-20A",
+   "name": "アクア 冷蔵庫 AQR-20A",
+   "kind": "fridge",
+   "w": 53.0,
+   "d": 60.1,
+   "h": 137.5,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:AQR-S36AL",
+   "name": "アクア 冷蔵庫 AQR-S36AL",
+   "kind": "fridge",
+   "w": 60.0,
+   "d": 68.5,
+   "h": 177.5,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:JR-CV34C",
+   "name": "ハイアール 冷蔵庫 JR-CV34C",
+   "kind": "fridge",
+   "w": 54.0,
+   "d": 66.6,
+   "h": 181.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRSN-SX43A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSN-SX43A",
+   "kind": "fridge",
+   "w": 65.0,
+   "d": 62.8,
+   "h": 183.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:NR-C374C",
+   "name": "パナソニック 冷蔵庫 NR-C374C",
+   "kind": "fridge",
+   "w": 59.0,
+   "d": 63.3,
+   "h": 180.7,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:MR-P15M",
+   "name": "三菱電機 冷蔵庫 MR-P15M",
+   "kind": "fridge",
+   "w": 48.0,
+   "d": 59.5,
+   "h": 121.3,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:JR-NF121C",
+   "name": "ハイアール 冷蔵庫 JR-NF121C",
+   "kind": "fridge",
+   "w": 49.5,
+   "d": 55.3,
+   "h": 114.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRSN-14A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSN-14A",
+   "kind": "fridge",
+   "w": 47.5,
+   "d": 61.5,
+   "h": 129.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:FJ-HM7K",
+   "name": "シャープ 冷蔵庫 FJ-HM7K",
+   "kind": "fridge",
+   "w": 49.5,
+   "d": 59.8,
+   "h": 77.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRSN-32A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSN-32A",
+   "kind": "fridge",
+   "w": 63.5,
+   "d": 68.0,
+   "h": 186.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRGN-45A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRGN-45A",
+   "kind": "fridge",
+   "w": 68.5,
+   "d": 69.9,
+   "h": 170.1,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRGN-50A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRGN-50A",
+   "kind": "fridge",
+   "w": 68.5,
+   "d": 69.9,
+   "h": 183.3,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRSN-HF44A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSN-HF44A",
+   "kind": "fridge",
+   "w": 68.5,
+   "d": 69.9,
+   "h": 170.5,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:R-H49Y",
+   "name": "日立 冷蔵庫 R-H49Y",
+   "kind": "fridge",
+   "w": 65.0,
+   "d": 65.1,
+   "h": 183.3,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:JR-SY15AR",
+   "name": "ハイアール 冷蔵庫 JR-SY15AR",
+   "kind": "fridge",
+   "w": 44.0,
+   "d": 59.9,
+   "h": 139.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:JR-NF140P",
+   "name": "ハイアール 冷蔵庫 JR-NF140P",
+   "kind": "fridge",
+   "w": 49.5,
+   "d": 55.3,
+   "h": 125.3,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:R-MR7SHD",
+   "name": "日立 冷蔵庫 R-MR7SHD",
+   "kind": "fridge",
+   "w": 55.9,
+   "d": 42.0,
+   "h": 75.0,
+   "confidence": "高"
+  },
+  {
+   "id": "fridge:SJ-PT32P",
+   "name": "シャープ 冷蔵庫 SJ-PT32P",
+   "kind": "fridge",
+   "w": 54.4,
+   "d": 64.7,
+   "h": 177.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRSN-8A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSN-8A",
+   "kind": "fridge",
+   "w": 35.6,
+   "d": 55.5,
+   "h": 99.6,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:MR-CX37M",
+   "name": "三菱電機 冷蔵庫 MR-CX37M",
+   "kind": "fridge",
+   "w": 60.0,
+   "d": 65.6,
+   "h": 182.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRGN-C50A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRGN-C50A",
+   "kind": "fridge",
+   "w": 68.5,
+   "d": 69.9,
+   "h": 183.3,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:R-MR7SHL",
+   "name": "日立 冷蔵庫 R-MR7SHL",
+   "kind": "fridge",
+   "w": 55.9,
+   "d": 42.0,
+   "h": 75.0,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:MR-JM49N",
+   "name": "三菱電機 冷蔵庫 MR-JM49N",
+   "kind": "fridge",
+   "w": 65.0,
+   "d": 66.0,
+   "h": 183.3,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRGN-C45A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRGN-C45A",
+   "kind": "fridge",
+   "w": 68.5,
+   "d": 69.9,
+   "h": 170.1,
+   "confidence": "中"
+  },
+  {
+   "id": "fridge:IRSN-23B",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSN-23B",
+   "kind": "fridge",
+   "w": 54.5,
+   "d": 62.7,
+   "h": 170.0,
+   "confidence": "要確認"
+  },
+  {
+   "id": "fridge:IRSD-14A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSD-14A",
+   "kind": "fridge",
+   "w": 50.0,
+   "d": 54.9,
+   "h": 124.0,
+   "confidence": "要確認"
+  },
+  {
+   "id": "fridge:IRSN-23A",
+   "name": "アイリスオーヤマ 冷蔵庫 IRSN-23A",
+   "kind": "fridge",
+   "w": 54.5,
+   "d": 62.7,
+   "h": 170.0,
+   "confidence": "要確認"
+  },
+  {
+   "id": "washer:ITW-60A01",
+   "name": "アイリスオーヤマ 洗濯機 ITW-60A01",
+   "kind": "washer",
+   "w": 56.7,
+   "d": 54.9,
+   "h": 89.3,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:JW60WP01",
+   "name": "maxzen 洗濯機 JW60WP01",
+   "kind": "washer",
+   "w": 56.5,
+   "d": 53.4,
+   "h": 83.5,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:DJW70WP01",
+   "name": "maxzen 洗濯機 DJW70WP01",
+   "kind": "washer",
+   "w": 56.5,
+   "d": 53.4,
+   "h": 83.5,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:JW70WP01",
+   "name": "maxzen 洗濯機 JW70WP01",
+   "kind": "washer",
+   "w": 56.5,
+   "d": 53.4,
+   "h": 83.5,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:IAW-T451",
+   "name": "アイリスオーヤマ 洗濯機 IAW-T451",
+   "kind": "washer",
+   "w": 54.0,
+   "d": 53.5,
+   "h": 83.5,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:DJW50WP01",
+   "name": "maxzen 洗濯機 DJW50WP01",
+   "kind": "washer",
+   "w": 56.5,
+   "d": 53.4,
+   "h": 83.5,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:AW-10GM3",
+   "name": "東芝 洗濯機 AW-10GM3",
+   "kind": "washer",
+   "w": 62.2,
+   "d": 63.9,
+   "h": 105.2,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:FLK842",
+   "name": "アイリスオーヤマ ドラム式洗濯機 FLK842",
+   "kind": "washer",
+   "w": 59.5,
+   "d": 65.2,
+   "h": 106.5,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:AW-7GM4",
+   "name": "東芝 洗濯機 AW-7GM4",
+   "kind": "washer",
+   "w": 55.5,
+   "d": 56.0,
+   "h": 99.0,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:CDK842",
+   "name": "アイリスオーヤマ ドラム式洗濯機 CDK842",
+   "kind": "washer",
+   "w": 59.5,
+   "d": 65.2,
+   "h": 90.8,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:PS-55AS2",
+   "name": "日立 二槽式洗濯機 PS-55AS2",
+   "kind": "washer",
+   "w": 76.0,
+   "d": 44.9,
+   "h": 93.0,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:YWM-80",
+   "name": "山善 洗濯機 YWM-80",
+   "kind": "washer",
+   "w": 60.0,
+   "d": 59.5,
+   "h": 99.5,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:PS-65AS2",
+   "name": "日立 二槽式洗濯機 PS-65AS2",
+   "kind": "washer",
+   "w": 80.0,
+   "d": 43.4,
+   "h": 88.2,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:YWM-100",
+   "name": "山善 洗濯機 YWM-100",
+   "kind": "washer",
+   "w": 63.0,
+   "d": 64.0,
+   "h": 103.5,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:AW-5GA4",
+   "name": "東芝 洗濯機 AW-5GA4",
+   "kind": "washer",
+   "w": 55.5,
+   "d": 56.0,
+   "h": 97.0,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:JW-HD100A",
+   "name": "ハイアール 洗濯機 JW-HD100A",
+   "kind": "washer",
+   "w": 59.0,
+   "d": 57.5,
+   "h": 94.0,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:JW-TD90SA",
+   "name": "ハイアール ドラム式洗濯機 JW-TD90SA",
+   "kind": "washer",
+   "w": 59.5,
+   "d": 64.0,
+   "h": 86.0,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:AW-6GA4",
+   "name": "東芝 洗濯機 AW-6GA4",
+   "kind": "washer",
+   "w": 55.5,
+   "d": 56.0,
+   "h": 97.0,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:ES-GE7K",
+   "name": "シャープ 洗濯機 ES-GE7K",
+   "kind": "washer",
+   "w": 56.5,
+   "d": 53.8,
+   "h": 89.8,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:ES-GE6KJ",
+   "name": "シャープ 洗濯機 ES-GE6KJ",
+   "kind": "washer",
+   "w": 56.5,
+   "d": 53.8,
+   "h": 89.8,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:NA-F5B5",
+   "name": "パナソニック 洗濯機 NA-F5B5",
+   "kind": "washer",
+   "w": 55.6,
+   "d": 56.6,
+   "h": 88.0,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:AW-8VH4",
+   "name": "東芝 洗濯機 AW-8VH4",
+   "kind": "washer",
+   "w": 60.0,
+   "d": 61.5,
+   "h": 102.1,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:NA-F6B5",
+   "name": "パナソニック 洗濯機 NA-F6B5",
+   "kind": "washer",
+   "w": 55.6,
+   "d": 56.6,
+   "h": 88.0,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:NA-SD10HBL",
+   "name": "パナソニック ドラム式洗濯機 NA-SD10HBL",
+   "kind": "washer",
+   "w": 63.9,
+   "d": 65.0,
+   "h": 101.0,
+   "confidence": "高"
+  },
+  {
+   "id": "washer:PS65AS2W",
+   "name": "日立 二槽式洗濯機 PS65AS2W",
+   "kind": "washer",
+   "w": 80.0,
+   "d": 43.4,
+   "h": 88.2,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:NA-SD10UBL",
+   "name": "パナソニック ドラム式洗濯機 NA-SD10UBL",
+   "kind": "washer",
+   "w": 63.9,
+   "d": 65.0,
+   "h": 101.0,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:HW-DG100XH",
+   "name": "ハイセンス 洗濯機 HW-DG100XH",
+   "kind": "washer",
+   "w": 59.9,
+   "d": 62.2,
+   "h": 106.0,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:JW-T45SA",
+   "name": "ハイアール ドラム式洗濯機 JW-T45SA",
+   "kind": "washer",
+   "w": 51.6,
+   "d": 53.7,
+   "h": 79.0,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:YWMD-D1050",
+   "name": "山善 ドラム式洗濯機 YWMD-D1050",
+   "kind": "washer",
+   "w": 60.0,
+   "d": 59.5,
+   "h": 85.7,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:BD-SG110KL",
+   "name": "日立 ドラム式洗濯機 BD-SG110KL",
+   "kind": "washer",
+   "w": 63.8,
+   "d": 71.5,
+   "h": 104.3,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:BW-V80P",
+   "name": "日立 洗濯機 BW-V80P",
+   "kind": "washer",
+   "w": 60.8,
+   "d": 61.0,
+   "h": 93.0,
+   "confidence": "中"
+  },
+  {
+   "id": "washer:IAW-T606",
+   "name": "アイリスオーヤマ 洗濯機 IAW-T606",
+   "kind": "washer",
+   "w": 54.0,
+   "d": 53.5,
+   "h": 89.0,
+   "confidence": "要確認"
+  },
+  {
+   "id": "washer:IAW-T504",
+   "name": "アイリスオーヤマ 洗濯機 IAW-T504",
+   "kind": "washer",
+   "w": 55.5,
+   "d": 53.5,
+   "h": 92.0,
+   "confidence": "要確認"
+  },
+  {
+   "id": "washer:ITW-70A01",
+   "name": "アイリスオーヤマ 洗濯機 ITW-70A01",
+   "kind": "washer",
+   "w": 59.0,
+   "d": 59.1,
+   "h": 93.0,
+   "confidence": "要確認"
+  },
+  {
+   "id": "washer:ITW-80B01",
+   "name": "アイリスオーヤマ 洗濯機 ITW-80B01",
+   "kind": "washer",
+   "w": 59.3,
+   "d": 63.7,
+   "h": 103.2,
+   "confidence": "要確認"
+  },
+  {
+   "id": "washer:ITW-100B01",
+   "name": "アイリスオーヤマ 洗濯機 ITW-100B01",
+   "kind": "washer",
+   "w": 59.3,
+   "d": 60.0,
+   "h": 100.9,
+   "confidence": "要確認"
+  },
+  {
+   "id": "washer:ITW-100A",
+   "name": "アイリスオーヤマ 洗濯機 ITW-100A",
+   "kind": "washer",
+   "w": 59.3,
+   "d": 64.7,
+   "h": 107.1,
+   "confidence": "要確認"
+  },
+  {
+   "id": "washer:IAW-T804E",
+   "name": "アイリスオーヤマ 洗濯機 IAW-T804E",
+   "kind": "washer",
+   "w": 59.3,
+   "d": 60.0,
+   "h": 97.0,
+   "confidence": "要確認"
+  },
+  {
+   "id": "washer:ITW-50B01",
+   "name": "アイリスオーヤマ 洗濯機 ITW-50B01",
+   "kind": "washer",
+   "w": 54.0,
+   "d": 53.5,
+   "h": 89.5,
+   "confidence": "要確認"
+  },
+  {
+   "id": "washer:ITW-70B01",
+   "name": "アイリスオーヤマ 洗濯機 ITW-70B01",
+   "kind": "washer",
+   "w": 52.2,
+   "d": 57.9,
+   "h": 99.0,
+   "confidence": "要確認"
+  },
+  {
+   "id": "washer:TCW-80A02",
+   "name": "アイリスオーヤマ 洗濯機 TCW-80A02",
+   "kind": "washer",
+   "w": 59.3,
+   "d": 63.7,
+   "h": 103.2,
+   "confidence": "要確認"
+  }
+ ],
+ "loading_factor": 1.2
+}

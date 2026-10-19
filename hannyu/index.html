@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>搬入経路チェック｜ひっこし整えメモ</title>
+<meta name="description" content="家電・家具の寸法と、玄関・廊下・階段・エレベーターの幅で、通るかを確かめます">
+<meta name="robots" content="max-image-preview:large">
+<link rel="canonical" href="https://hikkoshi-seiri.com/hannyu/index.html">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#edf2f3">
+<meta property="og:title" content="搬入経路チェック｜ひっこし整えメモ"><meta property="og:description" content="家電・家具の寸法と、玄関・廊下・階段・エレベーターの幅で、通るかを確かめます"><meta property="og:type" content="website"><meta property="og:site_name" content="ひっこし整えメモ"><meta property="og:image" content="https://hikkoshi-seiri.com/og/site.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=36b82ec4">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="hannyu.css?v=e7bc3831">
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<header><div class="bar-wrap"><div class="wrap bar">
+<a class="logo" href="../index.html"><img src="../icon.svg" alt="" width="34" height="34">ひっこし整えメモ</a>
+<nav class="navlinks" aria-label="主なページ"><a href="../nimotsu/index.html">荷物量→トラック</a><a href="../hannyu/index.html" class="on" aria-current="page">搬入チェック</a><a href="../pages/index.html">ページ一覧</a></nav><div class="sns"><button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span aria-hidden="true">☰</span>メニュー</button></div>
+</div></div>
+<nav class="wrap chips" aria-label="主なページ"><a href="../index.html">ホーム</a><a href="../nimotsu/index.html">荷物量→トラック</a><a href="../hannyu/index.html" class="on" aria-current="page">搬入チェック</a><a href="../pages/index.html">ページ一覧</a><a href="../pages/index.html#procedure">手続き</a><a href="../pages/index.html#appliance">家電</a></nav>
+<div id="menu" class="menu" hidden><div class="menu-bg"></div><div class="menu-panel" role="dialog" aria-modal="true" aria-label="メニュー" tabindex="-1">
+<div class="menu-head"><b>メニュー</b><button class="menu-close" type="button" aria-label="閉じる">×</button></div><a href="../index.html">ホーム</a><a href="../nimotsu/index.html">荷物量とトラックの大きさ</a><a href="../hannyu/index.html" class="on" aria-current="page">搬入経路チェック</a><a href="../pages/index.html#truck">トラックに何が載るか</a><a href="../pages/index.html#route">搬入経路</a><a href="../pages/index.html#volume">荷物量の目安</a><a href="../pages/index.html#procedure">手続きと期限</a><a href="../pages/index.html#appliance">大型家電の扱い</a><small>その他</small><a href="../about.html">このサイトについて</a><a href="../method.html">データと判定の決め方</a><a href="../contact.html">お問い合わせ</a></div></div>
+</header>
+<main class="wrap" id="main"><section class="tool"><div class="hk" id="hannyu" data-src="catalog.json">
+  <section class="hk-hero band"><div class="hk-hero-txt">
+    <h1>冷蔵庫・洗濯機・家具が、玄関や廊下を通るか確かめる</h1>
+    <p>運ぶ物の寸法と、通り道（玄関・廊下・曲がり角・階段・エレベーター）の寸法を入れると、区間ごとに「計算上は通る／要確認／計算上は通らない」を出します。</p>
+  </div><div class="hk-hero-img"><img src="../img/group-route.jpg" width="1200" height="800" alt="" decoding="async"><span class="credit">イメージ図（AI生成。実物・実測ではありません）</span></div></section><ol class="hk-steps" aria-label="使い方"><li><span class="hk-n">1</span>運ぶ物を選ぶ</li><li><span class="hk-n">2</span>通り道の寸法を入れる</li><li><span class="hk-n">3</span>区間ごとの判定を見る</li></ol>
+
+  <section class="hk-step">
+    <p class="hk-tag">入力</p>
+    <h2><span class="hk-n">1</span>運ぶ物</h2>
+    <p class="hk-first">まず、運ぶ物をボタンで選ぶか、幅・奥行・高さを入れてください。</p>
+    <p class="hk-hint">よくある物をタップ（寸法は集計した中央値が入ります）</p>
+    <div class="hk-quick" id="hnQuick"></div>
+    <label class="hk-pick"><span class="hk-hint">型番や、ほかの物は一覧から</span>
+      <select id="hnPick"><option value="">選んでください</option></select></label>
+    <div class="hk-dims">
+      <label><span>名前</span><span class="hk-in"><input id="hnName" autocomplete="off" placeholder="例 冷蔵庫"></span></label>
+      <label><span>幅</span><span class="hk-in"><input id="hnW" inputmode="decimal" autocomplete="off"><span>cm</span></span></label>
+      <label><span>奥行</span><span class="hk-in"><input id="hnD" inputmode="decimal" autocomplete="off"><span>cm</span></span></label>
+      <label><span>高さ</span><span class="hk-in"><input id="hnH" inputmode="decimal" autocomplete="off"><span>cm</span></span></label>
+    </div>
+    <label class="hk-check"><input type="checkbox" id="hnUp"> 立てたまま運ぶ物（冷蔵庫・洗濯機など。横に倒さない）</label>
+  </section>
+
+  <section class="hk-step">
+    <p class="hk-tag">入力</p>
+    <h2><span class="hk-n">2</span>通り道の寸法</h2>
+    <p class="hk-hint">測り方：ドアは開けきった状態で枠から枠まで測り、蝶番・ドアクローザー・取っ手が出っぱるぶんを引きます。高さはドアの上枠まで。廊下はいちばん狭い所で、照明・手すりの下も測ります。</p>
+    <p class="hk-hint">区間は、建物の入口から部屋までの順です。使わない区間はチェックを外し、測れない区間は「測れない」に印を付けてください。</p>
+    <div class="hk-sec" data-sec="ev"><label class="hk-on"><input type="checkbox"> エレベーター</label><label class="hk-cant"><input type="checkbox" data-cant> 測れない</label>
+      <div class="hk-dims"><label><span>出入口の幅</span><span class="hk-in"><input data-k="dw" inputmode="decimal"><span>cm</span></span></label>
+        <label><span>出入口の高さ</span><span class="hk-in"><input data-k="dh" inputmode="decimal"><span>cm</span></span></label>
+        <label><span>かごの間口（横）</span><span class="hk-in"><input data-k="a" inputmode="decimal"><span>cm</span></span></label>
+        <label><span>かごの奥行</span><span class="hk-in"><input data-k="b" inputmode="decimal"><span>cm</span></span></label>
+        <label><span>かごの高さ</span><span class="hk-in"><input data-k="c" inputmode="decimal"><span>cm</span></span></label></div></div>
+    <div class="hk-sec" data-sec="stairs"><label class="hk-on"><input type="checkbox"> 階段</label><label class="hk-cant"><input type="checkbox" data-cant> 測れない</label>
+      <div class="hk-dims"><label><span>階段の幅</span><span class="hk-in"><input data-k="w" inputmode="decimal"><span>cm</span></span></label>
+        <label><span>踊り場の奥行（折り返すとき）</span><span class="hk-in"><input data-k="b" inputmode="decimal"><span>cm</span></span></label></div></div>
+    <div class="hk-sec" data-sec="door"><label class="hk-on"><input type="checkbox" checked> 玄関ドア・部屋のドア</label><label class="hk-cant"><input type="checkbox" data-cant> 測れない</label>
+      <div class="hk-dims"><label><span>幅</span><span class="hk-in"><input data-k="w" inputmode="decimal"><span>cm</span></span></label>
+        <label><span>高さ</span><span class="hk-in"><input data-k="h" inputmode="decimal"><span>cm</span></span></label></div></div>
+    <div class="hk-sec" data-sec="hall"><label class="hk-on"><input type="checkbox" checked> 廊下（まっすぐ）</label><label class="hk-cant"><input type="checkbox" data-cant> 測れない</label>
+      <div class="hk-dims"><label><span>幅</span><span class="hk-in"><input data-k="w" inputmode="decimal"><span>cm</span></span></label></div></div>
+    <div class="hk-sec" data-sec="corner"><label class="hk-on"><input type="checkbox"> 曲がり角（直角）</label><label class="hk-cant"><input type="checkbox" data-cant> 測れない</label>
+      <div class="hk-dims"><label><span>入る側の廊下の幅</span><span class="hk-in"><input data-k="a" inputmode="decimal"><span>cm</span></span></label>
+        <label><span>出る側の廊下の幅</span><span class="hk-in"><input data-k="b" inputmode="decimal"><span>cm</span></span></label>
+        <label><span>天井の高さ（任意）</span><span class="hk-in"><input data-k="c" inputmode="decimal"><span>cm</span></span></label></div></div>
+  </section>
+
+  <section class="hk-result" id="hnResult" aria-live="polite">
+    <!-- 例の結果（JS が動かないとき用。入力が入ると JS が差し替える） -->
+    <p class="hk-tag">結果</p>
+    <p class="hk-exband">例：幅60cmの冷蔵庫を、幅75cmの玄関ドア・幅90cmの廊下に通すとき<span class="hk-exsub">上で運ぶ物と通り道の寸法を入れると、その結果に変わります</span></p>
+    <div class="hk-vh hk-vh-chk"><p class="hk-head">冷蔵庫は、ドアで余裕が少なくなります。</p>
+    <p class="hk-overall"><span class="jg chk">△ 要確認（余裕が少ない）</span></p>
+    <p class="hk-basis">根拠　ドア：ドアの幅75cmに対し断面の幅60cm（余り15cm。左右10cmずつの余裕に足りない）</p>
+    </div>
+    <p class="hk-need">ドア・廊下・階段に要る幅の目安 <span class="num-big">80cm以上</span><span class="hk-exsub">断面の幅60cm＋左右10cmずつの余裕（曲がり角・高さは別に判定）</span></p>
+    <p class="hk-prog">2/2区間を入力済み</p>
+    <div class="hk-vlist"><div class="hk-vrow hk-worst"><span class="hk-vname">ドア</span><span class="jg chk">△ 要確認</span><div class="hk-gauge" role="img" aria-label="ドアの幅75cmに、断面の幅60cm"><div class="hk-g-track"><span class="hk-g-open" style="left:13.9%;width:72.1%"></span><span class="hk-g-need" style="left:11.5%;width:76.9%"></span><span class="hk-g-item chk" style="left:21.2%;width:57.7%">60</span></div>
+    <p class="hk-g-legend"><span><i class="hk-g-k open"></i>通り道 75cm</span><span><i class="hk-g-k item chk"></i>物の断面 60cm</span><span><i class="hk-g-k need"></i>余裕込み 80cm</span></p>
+    </div>
+    <p class="hk-vtext">ドアの幅75cmに対し、断面の幅は60cm（余り15cm）。左右10cmずつの余裕はありません。手や梱包材が入るかを確かめてください。</p>
+    </div>
+    <div class="hk-vrow"><span class="hk-vname">廊下</span><span class="jg ok">○ 計算上は通る</span><div class="hk-gauge" role="img" aria-label="廊下の幅90cmに、断面の幅60cm"><div class="hk-g-track"><span class="hk-g-open" style="left:11.5%;width:76.9%"></span><span class="hk-g-need" style="left:15.8%;width:68.4%"></span><span class="hk-g-item ok" style="left:24.4%;width:51.3%">60</span></div>
+    <p class="hk-g-legend"><span><i class="hk-g-k open"></i>通り道 90cm</span><span><i class="hk-g-k item ok"></i>物の断面 60cm</span><span><i class="hk-g-k need"></i>余裕込み 80cm</span></p>
+    </div>
+    <p class="hk-vtext">廊下の幅90cmに対し、断面の幅60cm＋左右10cmずつの余裕があります。</p>
+    </div>
+    </div><p class="hk-note">※入力した寸法だけの計算の目安です。搬入の可否は引越し会社の下見・メーカーの仕様を優先してください（<a href="../method.html">詳しく</a>）</p>
+  </section>
+
+  <section class="hk-how">
+    <h2>判定のしかた</h2>
+    <p>ドア・廊下・階段は、運ぶ物の断面（運ぶ向きと直角な面）の幅に、左右それぞれ10cmの余裕を足した幅があれば「計算上は通る」、余裕は足りないが断面は入るなら「要確認」、どの向きでも断面が入らなければ「計算上は通らない」です。左右10cmは日立の冷蔵庫の案内（搬入には本体の左右それぞれ10cm程度）で、家具には公式の目安がないため同じ値を使っています。冷蔵庫・洗濯機は立てたまま運ぶ前提です（パナソニックの冷蔵庫の案内：運ぶときは必ず立てた状態で）。</p>
+    <p>曲がり角は、上から見た長方形が直角の角を回れるかを計算しています（幅aの廊下から幅bの廊下へ、幅wの物が通れる長さの上限＝a/cosθ＋b/sinθ−w(tanθ＋1/tanθ) の最小値）。立てて回す・傾けるといった動きは入っていないので、長さが足りないときは「要確認」にしています。階段の折り返しは、階段の幅と踊り場の奥行の曲がり角として計算します。</p>
+    <p>梱包材の厚み・ドアの蝶番やドアクローザー・手すり・照明などの出っぱりは含みません。最終的な判断は、引越し会社の下見で確かめてください。くわしくは<a href="../method.html">データと判定の決め方</a>へ。</p>
+    <div id="hnRef"></div>
+  </section>
+</div>
+</section><script src="hannyu.js?v=ba4721e4" defer></script></main>
+<footer class="wrap"><div class="links"><a href="../about.html">このサイトについて</a><a href="../method.html">データと判定の決め方</a><a href="../privacy.html">プライバシーポリシー</a><a href="../contact.html">お問い合わせ</a></div>
+<p class="meta">ひっこし整えメモは、引っ越しの疑問を公開データと仕様の数字で確かめる個人のサイトです。広告（アフィリエイト）を含むページには、その場所に「広告」「PR」と表示しています。</p>
+<p class="meta">画像について：サイト内のイラストは AI で生成したイメージで、実物や実測の写真ではありません。</p>
+<p class="meta">© 2026 ひっこし整えメモ・家具の寸法は Yahoo!ショッピングの出品の集計（<a href="https://developer.yahoo.co.jp/sitemap/" rel="noopener" target="_blank">Web Services by Yahoo! JAPAN</a>）</p></footer>
+<script>
+(function(){var b=document.querySelector('.menu-btn'),m=document.getElementById('menu');if(!b||!m)return;var c=m.querySelector('.menu-close'),bg=m.querySelector('.menu-bg'),p=m.querySelector('.menu-panel');
+var back=document.querySelectorAll('.bar-wrap,nav.chips,main,footer');
+function open(){m.hidden=false;document.body.classList.add('menu-open');b.setAttribute('aria-expanded','true');back.forEach(function(e){e.inert=true});p.focus()}
+function close(){m.hidden=true;document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');back.forEach(function(e){e.inert=false});b.focus()}
+b.addEventListener('click',open);c.addEventListener('click',close);bg.addEventListener('click',close);document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)close()})})();
+</script>
+</body>
+</html>

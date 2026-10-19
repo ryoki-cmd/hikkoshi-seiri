@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>データと判定の決め方｜ひっこし整えメモ</title>
+<meta name="description" content="ひっこし整えメモの数字の出どころ、判定の言葉の意味、計算の式と仮定、測り方、含んでいないこと。">
+<meta name="robots" content="max-image-preview:large">
+<link rel="canonical" href="https://hikkoshi-seiri.com/method.html">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#edf2f3">
+<meta property="og:title" content="データと判定の決め方｜ひっこし整えメモ"><meta property="og:description" content="ひっこし整えメモの数字の出どころ、判定の言葉の意味、計算の式と仮定、測り方、含んでいないこと。"><meta property="og:type" content="website"><meta property="og:site_name" content="ひっこし整えメモ"><meta property="og:image" content="https://hikkoshi-seiri.com/og/site.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=36b82ec4">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<header><div class="bar-wrap"><div class="wrap bar">
+<a class="logo" href="index.html"><img src="icon.svg" alt="" width="34" height="34">ひっこし整えメモ</a>
+<nav class="navlinks" aria-label="主なページ"><a href="nimotsu/index.html">荷物量→トラック</a><a href="hannyu/index.html">搬入チェック</a><a href="pages/index.html">ページ一覧</a></nav><div class="sns"><button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span aria-hidden="true">☰</span>メニュー</button></div>
+</div></div>
+<nav class="wrap chips" aria-label="主なページ"><a href="index.html">ホーム</a><a href="nimotsu/index.html">荷物量→トラック</a><a href="hannyu/index.html">搬入チェック</a><a href="pages/index.html">ページ一覧</a><a href="pages/index.html#procedure">手続き</a><a href="pages/index.html#appliance">家電</a></nav>
+<div id="menu" class="menu" hidden><div class="menu-bg"></div><div class="menu-panel" role="dialog" aria-modal="true" aria-label="メニュー" tabindex="-1">
+<div class="menu-head"><b>メニュー</b><button class="menu-close" type="button" aria-label="閉じる">×</button></div><a href="index.html">ホーム</a><a href="nimotsu/index.html">荷物量とトラックの大きさ</a><a href="hannyu/index.html">搬入経路チェック</a><a href="pages/index.html#truck">トラックに何が載るか</a><a href="pages/index.html#route">搬入経路</a><a href="pages/index.html#volume">荷物量の目安</a><a href="pages/index.html#procedure">手続きと期限</a><a href="pages/index.html#appliance">大型家電の扱い</a><small>その他</small><a href="about.html">このサイトについて</a><a href="method.html">データと判定の決め方</a><a href="contact.html">お問い合わせ</a></div></div>
+</header>
+<main class="wrap" id="main"><div class="doc"><h1>データと判定の決め方</h1>
+<p>ひっこし整えメモの道具と固定ページが、どのデータを、どう扱っているかを書いています。判定はすべて、入力した寸法と公開データをもとにした計算の目安です。</p>
+<h2>0. 判定の言葉の意味</h2>
+<ul><li><b>計算上は通る</b>：入力した寸法と、このページに書いた式の範囲で干渉しない、という意味です。搬入できることの保証ではありません。</li>
+<li><b>要確認</b>：余裕が足りない、または傾ける・立てるなど計算に入れていない動きで通る可能性があるとき。</li>
+<li><b>計算上は通らない</b>：運ぶ物の断面（運ぶ向きと直角な面）が、どの向きでも開口より大きいときだけです。</li>
+<li><b>トラックの候補</b>：荷物の体積の推定を日本通運の積載の目安と比べた「寸法上の候補」です。積めることの保証ではありません。</li></ul>
+<p><b>このサイトの判定は、入力した寸法と公開データをもとにした計算の目安で、搬入の可否や荷物が載るかどうかを保証するものではありません。判定と実際が違うときは、引っ越し会社の下見・メーカーの仕様を優先してください。</b></p>
+<h2>1. 荷物量とトラックの大きさ</h2>
+<p>品目ごとの外形（幅×奥行×高さ）の体積を足し、積み方のすき間や形の悪い家具の分として<b>1.2倍</b>します。1.2倍はこのサイトの仮定で、公開されたデータはありません。その値を、日本通運が公開しているトラックの積載の目安（2トン車 約5〜10㎥、2トンロング車 約10〜15㎥、4トンロング車 約20〜25㎥、10トン車 約40〜45㎥）と比べ、収まる区分を候補として出します。日本通運は「荷台サイズは積める荷物量そのものではなく、家具の形状や梱包状態によって実際の積載量は変動する」としています。</p>
+<p>区分の境目の前後15%は、大きいほうの区分も並べて出します。この15%は統計的な区間ではなく、言い切らないための便宜的な幅です。単身向けボックスは、体積が収まり、全部の物がボックスの内寸に入るときだけ「寸法上の候補」として出します。積み合わせができるかは判定していません。</p>
+<p>固定ページの「段ボールだけなら約○箱」は、積載の目安（下限と上限）を1.2で割り、段ボールMサイズ（50×40×40cm＝0.08㎥）の体積で割った、積み方の余裕を見込んだ目安です。下限と上限の幅は、トラックの積載の目安そのものの幅（例：2トン車 約5〜10㎥）から来ています。実際に積める数ではありません。</p>
+<h2>2. 搬入経路の判定</h2>
+<p>ドア・廊下・階段・エレベーターの出入口は、運ぶ物の断面の幅に左右それぞれ10cmの余裕を足した幅があれば「計算上は通る」、余裕は足りないが断面は入るなら「要確認」、どの向きでも断面が入らなければ「計算上は通らない」です。左右10cmは、日立の冷蔵庫の案内「搬入には、本体の寸法に左右それぞれ10cm程度の幅を目安としてください」からで、搬入の通り道についての値です（設置後の放熱スペースとは別）。家具には公式の目安がないため、同じ値を使っています。冷蔵庫・洗濯機は立てたまま運ぶ前提です（パナソニックの冷蔵庫の案内）。</p>
+<p>曲がり角は、上から見た長方形が直角の角を回れるかを平面で計算します。幅aの廊下から幅bの廊下へ、幅wの物が回れる長さの上限は、a/cosθ＋b/sinθ−w(tanθ＋1/tanθ) をθで動かしたときの最小値です（w=0 のとき、はしごが角を曲がれる長さの公式 (a<sup>2/3</sup>＋b<sup>2/3</sup>)<sup>3/2</sup> に一致します）。立てて回す・傾けるといった3次元の動きは入れていないので、長さが足りないときは「要確認」止まりにしています。階段の折り返しは、階段の幅と踊り場の奥行の曲がり角として計算します。エレベーターは、出入口は開口の式で、かごの中は対角の長さで「要確認」までしか出しません。</p>
+<p>含まないもの：梱包材の厚み、ドアの蝶番やドアクローザー、取っ手、手すり、照明などの出っぱり、作業する人の手が入るすき間、ドアを外す・分解するといった方法。</p>
+<h2>3. 測り方</h2>
+<ul><li>ドア：開けきった状態で、枠から枠までのいちばん狭い幅。蝶番・ドアクローザー・取っ手のぶんは差し引きます。高さは床から上枠まで。</li>
+<li>廊下：いちばん狭いところの幅。壁の出っぱり、手すり、照明の下も測ります。</li>
+<li>曲がり角：入る側と出る側の廊下の幅。天井が低ければ高さも。</li>
+<li>階段：手すりの内側の幅と、踊り場の奥行。天井が低いところの高さ。</li>
+<li>エレベーター：出入口の幅と高さ、かごの間口・奥行・高さ。管理会社の案内があればそちらを優先します。</li></ul>
+<h2>4. 家具・家電のデータ</h2>
+<p>冷蔵庫・洗濯機は、楽天市場・Yahoo!ショッピングの商品説明から型番ごとに寸法を読み取り、容量帯・幅のクラスごとに中央値を出しています（一部の型番はメーカー公式の仕様と照合しています）。ソファ・ベッドフレーム・机・本棚・テレビ台・チェスト・電子レンジ・ダイニングテーブルは、両ショップの出品（品目ごとにジャンルを指定して30〜50件）から寸法を読み取った中央値です。商品名・価格は出さず、寸法の統計と件数・取得日だけを表示します。段ボール・布団袋は引っ越し会社の公式の値、マットレスの幅と長さはフランスベッドの公式の値で、厚さ（20・30cm）はこのサイトの仮定です。</p>
+<h2>5. 手続きの期限</h2>
+<p>法令で決まっている期限だけを数字で書きます（転入届・転居届は14日以内＝住民基本台帳法第22条・第23条、転出届は「あらかじめ」＝第24条、郵便の転送は届出日から1年間＝日本郵便）。自治体ごとに違う運用（転出届の受付開始、粗大ごみの予約など）は数字を出さず「お住まいの自治体で確認」と書きます。条文の確認日は各ページに書き、年に4回（1月・4月・7月・10月）見直します。</p>
+<h2>6. 含んでいないこと（限界）</h2>
+<ul><li>引っ越しの費用・見積額（会社・時期・距離で変わるため）</li><li>建物ごとの事情（管理規約、養生のルール、エレベーターの使用予約）</li><li>家電の個体差、梱包後の寸法、脚やキャスターを付けた高さ</li><li>作業時間の目安（公式の値がないため）</li></ul>
+<h2>7. 更新と訂正</h2>
+<p>各ページの「更新」は、文章や判定の数字を変えた日です。出品の件数と取得日は毎朝変わりますが、それだけでは更新日を変えません。数字の誤りを見つけたときは、<a href="contact.html">お問い合わせ</a>からページ名と正しい値・出典を送ってください。確認できたものから直し、直した内容はそのページに「訂正」として残します。返事には数日かかることがあります。</p>
+<h2>8. 広告について</h2>
+<p>引っ越しの見積もり・不用品の回収や買取・レンタル・回線や電気の申し込み・商品のリンクには、広告（アフィリエイト）のリンクを含むことがあります。含むページには、その場所に「広告」「PR」と表示します。報酬の有無で、判定の結果や並び順は変えていません。引越し一括見積のリンク先では、入力した内容が複数の引っ越し会社に渡り、各社から連絡が来ることがあります。</p>
+<h2>9. 訂正履歴</h2>
+<p>まだありません（2026年10月、公開準備中）。直したときは、日付・ページ名・直した内容をここに書きます。</p>
+<h2>10. 文章と自動更新について</h2>
+<p>文章の初稿には生成 AI を使っています。公開前に、運営者が出典の原文・載せた数字・計算の結果を確かめ、出典と更新日・データ取得日を各ページに書いています。載せているデータは全機種の実測ではなく、条件で結果が変わるため、搬入や積載を保証するものではありません。誤りを見つけたときは<a href="contact.html">お問い合わせ</a>から知らせてください。毎朝の自動更新は、データの件数や中央値が大きく動いたとき、文章の型が変わったときは公開を止め、前の版のままにして人が確かめてから出します。</p>
+<p class="meta">最終更新：2026年10月12日</p></div></main>
+<footer class="wrap"><div class="links"><a href="about.html">このサイトについて</a><a href="method.html">データと判定の決め方</a><a href="privacy.html">プライバシーポリシー</a><a href="contact.html">お問い合わせ</a></div>
+<p class="meta">ひっこし整えメモは、引っ越しの疑問を公開データと仕様の数字で確かめる個人のサイトです。広告（アフィリエイト）を含むページには、その場所に「広告」「PR」と表示しています。</p>
+<p class="meta">画像について：サイト内のイラストは AI で生成したイメージで、実物や実測の写真ではありません。</p>
+<p class="meta">© 2026 ひっこし整えメモ・家具の寸法は Yahoo!ショッピングの出品の集計（<a href="https://developer.yahoo.co.jp/sitemap/" rel="noopener" target="_blank">Web Services by Yahoo! JAPAN</a>）</p></footer>
+<script>
+(function(){var b=document.querySelector('.menu-btn'),m=document.getElementById('menu');if(!b||!m)return;var c=m.querySelector('.menu-close'),bg=m.querySelector('.menu-bg'),p=m.querySelector('.menu-panel');
+var back=document.querySelectorAll('.bar-wrap,nav.chips,main,footer');
+function open(){m.hidden=false;document.body.classList.add('menu-open');b.setAttribute('aria-expanded','true');back.forEach(function(e){e.inert=true});p.focus()}
+function close(){m.hidden=true;document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');back.forEach(function(e){e.inert=false});b.focus()}
+b.addEventListener('click',open);c.addEventListener('click',close);bg.addEventListener('click',close);document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)close()})})();
+</script>
+</body>
+</html>
